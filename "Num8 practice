@@ -1,0 +1,8 @@
+from itertools import*
+words = (list(product("АКОРСТ",repeat=5)))
+count = 0
+for word in words:
+    count+=1
+    word = "".join(word)
+    if count%2==0 and word[0]!="А"  and word[0]!="С" and word[0]!="Т" and word.count("О")==2:
+        print(count)
